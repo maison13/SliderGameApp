@@ -19,6 +19,7 @@ struct ContentView: View {
             Spacer()
             
             Text("Подвиньте слайдер, как можно ближе к: \(targetValue)")
+               
             HStack {
                 Text("0")
                 UISliderRepresentation(currentValue: $currentValue, targetValue: $targetValue)
