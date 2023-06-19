@@ -41,7 +41,7 @@ struct ContentView: View {
     }
     
     private func updateTargetValue() {
-        targetValue = Int.random(in: 0...100)
+        targetValue = Int.random(in: 10...90)
     }
     
     private func computeScore() -> Int {
