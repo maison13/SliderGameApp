@@ -55,9 +55,9 @@
 			children = (
 				3290C8402A3FA09600061D51 /* SliderGameApp.swift */,
 				3290C8422A3FA09600061D51 /* ContentView.swift */,
+				3290C84E2A3FA83900061D51 /* UISliderRepresentation.swift */,
 				3290C8442A3FA09600061D51 /* Assets.xcassets */,
 				3290C8462A3FA09600061D51 /* Preview Content */,
-				3290C84E2A3FA83900061D51 /* UISliderRepresentation.swift */,
 			);
 			path = SliderGameApp;
 			sourceTree = "<group>";

@@ -12,42 +12,45 @@ struct ContentView: View {
     @State private var targetValue = 0
     @State private var currentValue: Float = 0
     
+    @State private var isPresented = false
     
     var body: some View {
         VStack (spacing: 20) {
-            Text("\(currentValue)")
-            
             Spacer()
+            
             Text("Подвиньте слайдер, как можно ближе к: \(targetValue)")
-            UISliderRepresentation(currentValue: $currentValue)
-        
+            HStack {
+                Text("0")
+                UISliderRepresentation(currentValue: $currentValue, targetValue: $targetValue)
+                Text("100")
+            }
+            
             Button("Проверь меня!", action: checkMe)
-            Button("Начать заново.", action: startOver)
+                .alert("Ваш результат:", isPresented: $isPresented, actions: {}) {
+                    Text("\(computeScore())")
+                }
+            Button("Начать заново.", action: updateTargetValue)
             Spacer()
         }
+        .padding()
         .onAppear {
             updateTargetValue()
         }
-        
     }
-
-
     
     private func checkMe() {
-        
+        isPresented.toggle()
     }
     
-    private func startOver() {
-        updateTargetValue()
-    }
     private func updateTargetValue() {
-        targetValue = Int.random(in: 1...99)
+        targetValue = Int.random(in: 0...100)
     }
     
     private func computeScore() -> Int {
-        let difference = abs(targetValue - lround(Double(currentValue)))
+        let difference = abs(targetValue - Int(currentValue))
         return 100 - difference
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
