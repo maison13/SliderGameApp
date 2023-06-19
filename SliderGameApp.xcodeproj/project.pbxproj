@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3290C8412A3FA09600061D51 /* SliderGameAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3290C8402A3FA09600061D51 /* SliderGameAppApp.swift */; };
+		3290C8412A3FA09600061D51 /* SliderGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3290C8402A3FA09600061D51 /* SliderGameApp.swift */; };
 		3290C8432A3FA09600061D51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3290C8422A3FA09600061D51 /* ContentView.swift */; };
 		3290C8452A3FA09600061D51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3290C8442A3FA09600061D51 /* Assets.xcassets */; };
 		3290C8482A3FA09600061D51 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3290C8472A3FA09600061D51 /* Preview Assets.xcassets */; };
+		3290C84F2A3FA83900061D51 /* UISliderRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3290C84E2A3FA83900061D51 /* UISliderRepresentation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3290C83D2A3FA09600061D51 /* SliderGameApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SliderGameApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3290C8402A3FA09600061D51 /* SliderGameAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderGameAppApp.swift; sourceTree = "<group>"; };
+		3290C8402A3FA09600061D51 /* SliderGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderGameApp.swift; sourceTree = "<group>"; };
 		3290C8422A3FA09600061D51 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3290C8442A3FA09600061D51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3290C8472A3FA09600061D51 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3290C84E2A3FA83900061D51 /* UISliderRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISliderRepresentation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +53,11 @@
 		3290C83F2A3FA09600061D51 /* SliderGameApp */ = {
 			isa = PBXGroup;
 			children = (
-				3290C8402A3FA09600061D51 /* SliderGameAppApp.swift */,
+				3290C8402A3FA09600061D51 /* SliderGameApp.swift */,
 				3290C8422A3FA09600061D51 /* ContentView.swift */,
 				3290C8442A3FA09600061D51 /* Assets.xcassets */,
 				3290C8462A3FA09600061D51 /* Preview Content */,
+				3290C84E2A3FA83900061D51 /* UISliderRepresentation.swift */,
 			);
 			path = SliderGameApp;
 			sourceTree = "<group>";
@@ -137,8 +140,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3290C84F2A3FA83900061D51 /* UISliderRepresentation.swift in Sources */,
 				3290C8432A3FA09600061D51 /* ContentView.swift in Sources */,
-				3290C8412A3FA09600061D51 /* SliderGameAppApp.swift in Sources */,
+				3290C8412A3FA09600061D51 /* SliderGameApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,57 @@
+//
+//  UISliderRepresentation.swift
+//  SliderGameApp
+//
+//  Created by Just Vovo on 19.06.2023.
+//
+
+import SwiftUI
+
+struct UISliderRepresentation: UIViewRepresentable {
+   
+    
+    
+    @Binding var currentValue: Float
+    
+    func makeUIView(context: Context) -> UISlider {
+        let slider = UISlider()
+        slider.minimumValue = 0
+        slider.maximumValue = 100
+        slider.value = Float(currentValue)
+        slider.thumbTintColor = .red
+        slider.addTarget(
+            context.coordinator,
+            action: #selector(Coordinator.sliderValueChanged),
+            for: .valueChanged)
+        
+        return slider
+    }
+        
+    func updateUIView(_ uiView: UISlider, context: Context) {
+        currentValue = uiView.value
+    }
+    
+    func makeCoordinator() -> Coordinator {
+       Coordinator(currentValue: $currentValue)
+    }
+}
+
+// MARK: Coordinator
+extension UISliderRepresentation {
+    class Coordinator: NSObject {
+        @Binding var currentValue: Float
+        
+        init(currentValue: Binding<Float>) {
+            self._currentValue = currentValue
+        }
+        
+        @objc func sliderValueChanged(_ sender: UISlider) {
+            currentValue = sender.value
+        }
+    }
+}
+    struct UISliderRepresentation_Previews: PreviewProvider {
+        static var previews: some View {
+            UISliderRepresentation(currentValue: .constant(50) )
+        }
+    }
