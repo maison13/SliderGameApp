@@ -19,17 +19,15 @@ struct ContentView: View {
             Spacer()
             
             Text("Подвиньте слайдер, как можно ближе к: \(targetValue)")
-               
+            
             HStack {
                 Text("0")
                 UISliderRepresentation(currentValue: $currentValue, targetValue: $targetValue)
                 Text("100")
             }
             
-            Button("Проверь меня!", action: checkMe)
-                .alert("Ваш результат:", isPresented: $isPresented, actions: {}) {
-                    Text("\(computeScore())")
-                }
+            Button("Проверь меня!", action: { isPresented.toggle() })
+            
             Button("Начать заново.", action: updateTargetValue)
             Spacer()
         }
@@ -37,10 +35,9 @@ struct ContentView: View {
         .onAppear {
             updateTargetValue()
         }
-    }
-    
-    private func checkMe() {
-        isPresented.toggle()
+        .alert("Ваш результат:", isPresented: $isPresented, actions: {}) {
+            Text("\(computeScore())")
+        }
     }
     
     private func updateTargetValue() {
