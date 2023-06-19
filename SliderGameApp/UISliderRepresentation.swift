@@ -34,7 +34,6 @@ struct UISliderRepresentation: UIViewRepresentable {
     func makeCoordinator() -> Coordinator {
         Coordinator(currentValue: $currentValue)
     }
-    
 }
 
 // MARK: Coordinator
