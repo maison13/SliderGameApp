@@ -20,17 +20,18 @@ struct ContentView: View {
             Spacer()
             Text("Подвиньте слайдер, как можно ближе к: \(targetValue)")
             UISliderRepresentation(currentValue: $currentValue)
-                .onChange(of: currentValue) { newValue in
-                    updateTargetValue()
-                }
+        
             Button("Проверь меня!", action: checkMe)
             Button("Начать заново.", action: startOver)
             Spacer()
         }
-        
+        .onAppear {
+            updateTargetValue()
         }
-        .padding()
+        
     }
+
+
     
     private func checkMe() {
         
